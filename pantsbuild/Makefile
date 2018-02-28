@@ -4,7 +4,6 @@
 run:
 	# :z suffix is needed to work with selinux
 	# https://stackoverflow.com/questions/24288616/permission-denied-on-accessing-host-directory-in-docker
-	SSH_AUTH_SOCK=$(echo $SSH_AUTH_SOCK)
 	docker run --rm -it \
 		-v ~/src:/workspace:z \
 		-v cache_pants:/root/.cache/pants \
